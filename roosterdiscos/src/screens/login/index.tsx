@@ -1,31 +1,42 @@
 import * as React from 'react';
-import {StyleSheet, ImageBackground, View, Text} from 'react-native';
-//import {imgfundo} from './../src/assets/imgs/background.png';
+import {StyleSheet,ImageBackground, View, Text} from 'react-native';
+//import background from './background.png';
 
-const imgfundo = {uri:'https://drive.google.com/file/d/1EOdNN8Bs8CZ0gr4Cy7qtroSxNom95DMl/view?usp=sharing'}
+
+
 interface LoginscreenProps {
 }
 
+const imgfundo= './background.png';
+
 export function Loginscreen (props: LoginscreenProps) {
     return (
-       <ImageBackground source={imgfundo} style={styles.backG}>
+        <ImageBackground source={require(imgfundo)} style={styles.backG}>  
             <View style={styles.container}>
-                <Text>Loginscreen</Text>
+                <Text style={styles.textAPP}> Será que vai?</Text>
+                  
             </View>
-        </ImageBackground> 
+        </ImageBackground>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        textAlign: 'center',
-        backgroundColor: '#3FCCFE',
-        fontSize: 30
+        flex: 1,
+        justifyContent: 'center',
+        padding: 10,
+        alignItems: 'stretch'
         
     },
     backG: {
         flex: 1,
-        justifyContent: 'center',
-      },
+       // justifyContent: 'center',
+        //resizeMode: "cover"
+    },
+    textAPP: {
+        color: 'white',
+        fontSize: 50,
+        textAlign: 'center'
+    }
 
 })

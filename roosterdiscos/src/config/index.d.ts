@@ -1,2 +1,2 @@
 declare module '*.jpg'
-declare module './src/assets/imgs/background.png'
+declare module './src/assets/imgs'
