@@ -9,7 +9,7 @@ export default function App() {
   return (
      //<Loginscreen/>
      //<Cadastro/>
-     <Produtos/>
+     <Produto/>
   );
 }
 

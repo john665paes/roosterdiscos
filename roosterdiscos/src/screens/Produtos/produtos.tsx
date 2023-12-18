@@ -1,27 +1,28 @@
 import React from 'react';
-import fundopags from './../../assets/images/fundopags.png';
-import disco from './../../assets/images/disco.jpeg';
-import nirvana from './../../assets/images/nirvana.jpeg';
-import guns from './../../assets/images/guns.jpeg';
-import { View, Text, ImageBackground, StyleSheet, Alert,ScrollView, } from 'react-native';
+import { View, Text, ImageBackground, StyleSheet, Alert ,ScrollView, } from 'react-native';
 import { Input } from '@rneui/themed';
-import { Button, Icon } from 'react-native-elements';
+import { Button } from 'react-native';
 import {  Card } from '@rneui/themed';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 export function Produto() {
+    const fundopags = require('./imgs/backCadastro.png');
+    const card1 = require('./imgs/card01.jpg');
+
   return (
     <ImageBackground source={fundopags} style={styles.background}>
         <ScrollView style={styles.orgcatalogo}>      
             <Card>
-            <Card.Title>Disco de Vinil -  Nirvana</Card.Title>
+            <Card.Title>LP Barrington Levy "Original Ragga Muffin" 1997</Card.Title>
             <Card.Divider />
             <Card.Image
                 style={{
-                    width: '100%',
-                    height: 100,
-                    aspectRatio: 1,
+                    //width: '50%',
+                    //height: '50%',
+                    aspectRatio: '100%',
                 }}
-                source={nirvana}
+                source={card1}
             />
             <Button
           title=" COMPRAR"
@@ -35,7 +36,7 @@ export function Produto() {
           }
           raised={true}></Button>
             </Card> 
-            <Card>
+            {/* <Card>
             <Card.Title>Disco de Vinil -  The Neighbourhood</Card.Title>
             <Card.Divider />
             <Card.Image
@@ -80,7 +81,7 @@ export function Produto() {
             />
           }
           raised={true}></Button>
-            </Card> 
+            </Card>  */}
             
         </ScrollView>
     </ImageBackground>
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
   },
   orgcatalogo: {
     width: '50%',
-    height:'50%'
+    height:'50%',textAlign: 'auto'
   }
   // container: {
   //   flex: 1,
