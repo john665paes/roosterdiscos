@@ -37,26 +37,28 @@ export function Cadastro(){
           placeholder="Nome Completo"
           onChangeText={setNome}
           value={nome}
-          style={{ width: 200, borderWidth: 1, marginBottom: 10 }}
+          
+          inputContainerStyle={styles.inputContainer}
         />
         <Input
-          placeholder="Email"
-          onChangeText={(text) => {
+          placeholder="Email" inputContainerStyle={styles.inputContainer}
+          onChangeText={(text)  => {
             setEmail(text);
             setIsValidEmail(true);
+
           }}
           value={email}
           style={{
             width: 200,
             borderWidth: 1,
             marginBottom: 10,
-            borderColor: isValidEmail ? 'black' : 'red',
+            borderColor: isValidEmail ?'black'  : 'red',
           }}
         />
         {!isValidEmail && <Text style={{ color: 'red' }}>Email Invalido</Text>}
         <Input
           placeholder="Senha"
-          onChangeText={setPassword}
+          onChangeText={setPassword} inputContainerStyle={styles.inputContainer}
           value={password}
           secureTextEntry={true}
           style={{
@@ -86,7 +88,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    padding: 5,
+    padding: 20,
     alignItems: 'stretch',
     marginTop: 190,
   },
@@ -99,8 +101,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'white',
     fontFamily:'riffic'
+  },
+  inputContainer: {
+    backgroundColor: 'rgba(255,255,255,0.7)',
+    borderRadius: 30,
+    padding: 10,
+    marginBottom: 10,
+    color: 'black'
   }
-  // inputContainer: {
-  //   backgroundColor: 'white',
-  // },
 });
