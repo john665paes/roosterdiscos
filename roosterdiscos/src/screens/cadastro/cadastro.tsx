@@ -34,14 +34,14 @@ export function Cadastro(){
         <Text style={styles.texto} >Cadastre seu Usuário</Text>
 
         <Input
-          placeholder="Nome Completo"
+          placeholder=" Nome Completo" leftIcon={{name:'person', color:'white'}}
           onChangeText={setNome}
           value={nome}
           
           inputContainerStyle={styles.inputContainer}
         />
         <Input
-          placeholder="Email" inputContainerStyle={styles.inputContainer}
+          placeholder=" Email" leftIcon={{name:'email', color :'white'}}inputContainerStyle={styles.inputContainer}
           onChangeText={(text)  => {
             setEmail(text);
             setIsValidEmail(true);
@@ -50,20 +50,20 @@ export function Cadastro(){
           value={email}
           style={{
             width: 200,
-            borderWidth: 1,
+            //borderWidth: 1,
             marginBottom: 10,
             borderColor: isValidEmail ?'black'  : 'red',
           }}
         />
         {!isValidEmail && <Text style={{ color: 'red' }}>Email Invalido</Text>}
         <Input
-          placeholder="Senha"
+          placeholder="Senha" leftIcon={{name: 'lock', color:'white'}}
           onChangeText={setPassword} inputContainerStyle={styles.inputContainer}
           value={password}
           secureTextEntry={true}
           style={{
             width: 200,
-            borderWidth: 1,
+            //borderWidth: 1,
             marginBottom: 10,
             borderColor: isValidPassword ? 'black' : 'red',
           }}
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     textShadowOffset: {width: -2, height: 2},
     textShadowRadius: 5,
     textDecorationStyle: 'double',
-    fontSize: 30,
+    fontSize: 40,
     color: 'white',
     fontFamily:'riffic'
   },
